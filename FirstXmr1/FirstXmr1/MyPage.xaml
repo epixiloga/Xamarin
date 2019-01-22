@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstXmr1.MyPage"
+             xmlns:local="clr-namespace:FirstXmr1.Models">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="couleur">Blue</Color>
+            <!--<local:Adresse x:Key="adresse" Country="France" City="Strasbourg"></local:Adresse>
+            <local:Personne x:Key="person" Firstname="Hafida" Lastname="Elko" Age="28"></local:Personne>-->
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding Users}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Firstname}"></Label>
+                            <Label Text="{Binding Lastname}"></Label>
+                            <Label Text="{Binding Age}"></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!--<StackLayout Padding="20" Spacing="50" BindingContext="{StaticResource person}">
+            <Slider x:Name="slider" Minimum="0" Maximum="360" BackgroundColor="AliceBlue"></Slider>
+            <Label Text="App M2I" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" TextColor="Red" 
+                   FontSize="23" Rotation="{Binding Source={x:Reference slider},Path=Value}"></Label>
+            
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Nom:" TextColor="{StaticResource couleur}"  HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="80"/>
+                <Entry x:Name="Firstname" Text="{Binding Firstname}"  Placeholder="Votre nom" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Prenom:"  TextColor="{StaticResource couleur}" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="80"/>
+                <Entry x:Name="Lastame" Text="{Binding Lastname}" Placeholder="Votre nom"  HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Age:"  TextColor="{StaticResource couleur}" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="80"/>
+                <Entry x:Name="age" Text="{Binding Age}" Placeholder="Votre age"  HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+            --><!--<StackLayout BindingContext="{StaticResource adresse}" Orientation="Horizontal">
+                <Label Text="Adresse:"  TextColor="{StaticResource couleur}" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="80"/>
+                <Entry x:Name="Adresse" Text="{Binding City}" Placeholder="Votre age"  HorizontalOptions="FillAndExpand"/>
+            </StackLayout>--><!--
+
+            <Button Text="Enregistrer" Clicked="Button_Clicked" />
+        </StackLayout>-->
+    </ContentPage.Content>
+</ContentPage>
